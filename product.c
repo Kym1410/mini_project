@@ -54,6 +54,8 @@ int Menu(){
     printf("4. 제품삭제\n");
     printf("5. 제품저장\n");
     printf("6. 제품검색\n");
+    printf("7. 가격검색\n");
+    printf("8. 별점검색\n"); 
     printf("0. 종료\n");
     printf("=> 원하는 메뉴는? :");
     scanf("%d",&menu);
