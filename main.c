@@ -36,6 +36,9 @@ int main(){
                 if(delok == 1)deleteProduct(&s[no-1]);
             }
             }
+	if(menu == 6){
+            searchName(s, index);
+        }
     }
     printf("종료됨!\n");
     return 0;
