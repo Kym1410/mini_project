@@ -39,6 +39,9 @@ int main(){
 	if(menu == 6){
             searchName(s, index);
         }
+	if(menu == 7){
+            searchPrice(s, index);
+	}
     }
     printf("종료됨!\n");
     return 0;

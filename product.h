@@ -1,7 +1,7 @@
 typedef struct{
     char name[50];
     int weight;
-    int price;
+    char price[20];
     int star;
     int starnum;
 } Product;
