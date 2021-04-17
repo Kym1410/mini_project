@@ -42,6 +42,9 @@ int main(){
 	if(menu == 7){
             searchPrice(s, index);
 	}
+	if(menu == 8){
+            searchStar(s, index);
+        }
     }
     printf("종료됨!\n");
     return 0;
