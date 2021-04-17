@@ -67,3 +67,25 @@ void searchPrice(Product *s, int count){
 
 } 
 
+void searchStar(Product *s, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("검색할 별점?");
+    scanf("%s",search);
+
+    printf("\n  Product     Weight     Price    Star\n");
+    printf("----------------------------------------\n");
+
+    for(int i=0; i<count; i++){
+        if(s[i].weight == 0) continue;
+        if(strstr(s[i].star,search)) {
+            printf("%2d",i+1);
+            readProduct(s[i]);
+            scnt++;
+        }
+    }
+    if(scnt == 0) printf("=>검색된 데이터 없음!");
+    printf("\n");
+
+} 
