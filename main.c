@@ -36,6 +36,9 @@ int main(){
                 if(delok == 1)deleteProduct(&s[no-1]);
             }
             }
+	if(menu == 5){
+            saveData(s, index);
+        }
 	if(menu == 6){
             searchName(s, index);
         }

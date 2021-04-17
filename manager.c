@@ -89,3 +89,15 @@ void searchStar(Product *s, int count){
     printf("\n");
 
 } 
+
+void saveData(Product *s, int count){
+    FILE *fp;
+    fp = fopen("Product.txt","wt");
+
+    for(int i=0; i< count; i++){
+        if(s[i].weight == 0) continue;
+        fprintf(fp,"%s %d %s %s",s[i].name, s[i].weight, s[i].price, s[i].star);
+    }
+    fclose(fp);
+    printf("=>저장됨!");
+}
