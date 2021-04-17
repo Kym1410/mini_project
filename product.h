@@ -2,8 +2,8 @@ typedef struct{
     char name[50];
     int weight;
     char price[20];
-    int star;
-    int starnum;
+    char star[20];
+    //int starnum;
 } Product;
 
 int addProduct(Product *s); //제품을 주가하는 함수
