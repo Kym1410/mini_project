@@ -29,7 +29,7 @@ int updataProduct(Product *s){
     printf("제품의 가격은? :");
     scanf("%s",s->price);
     printf("별점(1~5개) :");
-    scanf("%s",&s->star);
+    scanf("%s",s->star);
     printf("수정성공!");
 
     return 1;
