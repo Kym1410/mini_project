@@ -12,6 +12,9 @@ int main(){
     int index = 0;
     int count = 0;
 
+    count = loadData(s);
+    index = count;
+
     while(1){
         menu = Menu();
         if(menu == 0) break;
