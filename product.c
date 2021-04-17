@@ -10,15 +10,14 @@ int addProduct(Product *s){
     printf("제품의 가격은? :");
     scanf("%s",s->price);
     printf("별점(1~5개) :");
-    scanf("%d",&s->star);
-    s->starnum=s->star;
+    scanf("%s",s->star);
 
     return 1;
 }
 
 
 void readProduct(Product s){
-    printf("  %4s      %4d      %5s     %4d\n",s.name,s.weight,s.price,s.starnum);
+    printf("  %4s      %4d      %5s     %4s\n",s.name,s.weight,s.price,s.star);
 }
 
 
@@ -30,8 +29,7 @@ int updataProduct(Product *s){
     printf("제품의 가격은? :");
     scanf("%s",s->price);
     printf("별점(1~5개) :");
-    scanf("%d",&s->star);
-    s->starnum=s->star;
+    scanf("%s",&s->star);
     printf("수정성공!");
 
     return 1;
@@ -39,7 +37,6 @@ int updataProduct(Product *s){
 
 int deleteProduct(Product *s){
     s->weight = -1;
-    s->star = -1;
     printf("=> 삭제됨!");
 
     return 1;
