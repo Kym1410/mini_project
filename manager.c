@@ -15,7 +15,7 @@ void listProduct(Product *s, int count){
     printf("  Product     Weight     Price    Star\n");
     printf("----------------------------------------\n");
     for(int i=0; i<count; i++){
-        if(s[i].weight == -1) continue;
+        if(s[i].weight == 0) continue;
         printf("%d", i+1);
         readProduct(s[i]);
     }
@@ -96,7 +96,7 @@ void saveData(Product *s, int count){
 
     for(int i=0; i< count; i++){
         if(s[i].weight == 0) continue;
-        fprintf(fp,"%s %d %s %s",s[i].name, s[i].weight, s[i].price, s[i].star);
+        fprintf(fp,"%s %d %s %s\n",s[i].name, s[i].weight, s[i].price, s[i].star);
     }
     fclose(fp);
     printf("=>저장됨!");

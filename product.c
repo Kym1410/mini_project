@@ -36,7 +36,7 @@ int updataProduct(Product *s){
 }
 
 int deleteProduct(Product *s){
-    s->weight = -1;
+    s->weight = 0;
     printf("=> 삭제됨!");
 
     return 1;
