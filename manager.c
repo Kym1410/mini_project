@@ -109,17 +109,17 @@ int loadData(Product *s){
 
     if(fc!=NULL){
     for(i=0; i<100; i++){
-        fscanf(fc,"%s", s[i].name);
-        if(feof(fc)){
-            break;
+        if(feof(fc)) break;
+	fscanf(fc,"%s", s[i].name);
+	fscanf(fc,"%d", &s[i].weight);
+	fscanf(fc,"%s", s[i].price);
+	fscanf(fc,"%s", s[i].star);
         }
-        else
-        fscanf(fc," %d %s %s", &s[i].weight, s[i].price, s[i].star);
-        }
+    	fclose(fc);
         printf("=>로딩 성공!\n");
     }
-    else printf("파일 없음!");
-
-    fclose(fc);
+    else if(fc==NULL){printf("파일 없음!");
+    }
+    //fclose(fc);
     return i;
 }
